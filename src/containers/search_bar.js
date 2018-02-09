@@ -10,7 +10,7 @@ class SearchBar extends Component {
     this.state = { term: '' };
 
     this.onInputChange = this.onInputChange.bind(this);
-	  this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
   onInputChange(event) {
@@ -35,6 +35,7 @@ class SearchBar extends Component {
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">Submit</button>
         </span>
+        <div id="search_feedback"></div>
       </form>
     );
   }
