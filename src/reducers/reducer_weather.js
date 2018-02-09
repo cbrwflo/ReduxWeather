@@ -6,8 +6,11 @@ export default function(state = [], action) {
 			// State must not be manipulated, e.g. state.push([])
 			// ensure a new Object representing State is returned
 			// return state.concat([action.payload.data]);
-			return [ action.payload.data, ...state ]; //ES6 spread syntax. Equivalent to above
-		
+			if (action.error) 
+				return state;
+			else
+				return [ action.payload.data, ...state ]; //ES6 spread syntax. Equivalent to above
+			
 		default:
 			return state;
 	}
